@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    /// <summary>
+    /// スコア表示するテキスト
+    /// </summary>
     [SerializeField]
     TMPro.TextMeshProUGUI scoreText;
 
-    private int score;
+    /// <summary>
+    /// 現在のスコア
+    /// </summary>
+    private int currentScore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +27,13 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 指定したスコアを加算する
+    /// </summary>
+    /// <param name="scoreAdd"></param>
     public void AddScore(int scoreAdd)
     {
-        score += scoreAdd;
-        scoreText.text = "Score : " + score;
+        currentScore += scoreAdd;
+        scoreText.text = "Score : " + currentScore;
     }
 }
