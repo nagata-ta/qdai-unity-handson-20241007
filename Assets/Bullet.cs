@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     /// <summary>
     /// 球のスピード
     /// </summary>
-    public float speed = 1f;
+    public float speed;
 
     /// <summary>
     /// 弾が削除されるまでの時間
