@@ -5,12 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     /// <summary>
-    /// bullet Prefab
+    /// 弾Prefab（GameObject）
     /// </summary>
     public GameObject bullet;
 
     /// <summary>
-    /// 爆発音
+    /// 爆発音コンポーネント
     /// </summary>
     private AudioSource bang;
 
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         // 爆発音を設定しているAudioSourceコンポーネントの情報を取得する（GetComponent）
-        // public で参照を持たせるのと同じ
+        // bulletと同じように public で参照を持たせる方法でもOK。その場合はGetComporntは使わない。
         bang = GetComponent<AudioSource>();
     }
 
